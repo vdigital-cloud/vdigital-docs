@@ -1,22 +1,27 @@
 <div id="main-header" class="main-header">
 	<nav aria-labe="Auxiliary" class="aux-nav">
-		<li class="aux-nav-list-item">
-			<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+		<ul class="aux-nav-list">
+			<li class="aux-nav-list-item">
+				<input type="checkbox" class="checkbox js-toggle-dark-mode" id="checkbox">
+				<label for="checkbox" class="checkbox-label">
+					<i class="fas fa-moon"></i>
+					<i class="fas fa-sun"></i>
+					<span class="ball"></span>
+				</label>
 
-			<script>
-			const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+				<script>
+				const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
 
-			jtd.addEvent(toggleDarkMode, 'click', function(){
-			  if (jtd.getTheme() === 'dark') {
-				jtd.setTheme('light');
-				toggleDarkMode.textContent = 'Preview dark color scheme';
-			  } else {
-				jtd.setTheme('dark');
-				toggleDarkMode.textContent = 'Return to the light side';
-			  }
-			});
-			</script>
+				jtd.addEvent(toggleDarkMode, 'click', function(){
+				  if (jtd.getTheme() === 'dark') {
+					jtd.setTheme('light');
+				  } else {
+					jtd.setTheme('dark');
+				  }
+				});
+				</script>
 
-		</li>
+			</li>
+		</ul>
 	</nav>
 </div>
