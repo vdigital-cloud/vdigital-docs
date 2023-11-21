@@ -2,8 +2,8 @@ title: Docs test for VDI Cloud
 description: A Docs test for VDI Cloud
 theme: just-the-docs
 
-url: https://vdigital-cloud.github.io/kubernetes
-repository: vdigital-cloud/kubernetes
+url: https://vdigital-cloud.github.io/vdigital-docs
+repository: vdigital-cloud/vdigital-docs
 
 permalink: pretty
 
