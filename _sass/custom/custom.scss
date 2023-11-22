@@ -1,74 +1,33 @@
-// custom SCSS (or CSS) goes here
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
-.checkbox-label {
-    background-color: #494a50;
-    width: 50px;
-    height: 26px;
-    border-radius: 50px;
-    position: relative;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.checkbox-label .ball {
-    background-color: #fff;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
-}
-
-.checkbox-label .fa-moon {
-    /* CSS cho hình ảnh mặt trăng */
-    width: 18px;
-    height: 18px;
-    margin-left: 4px;
-    margin-right: 1px;
-    margin-top: 4px;
-    fill:#f1c40f;
+// Print-only styles.
+@media print {
+  .side-bar,
+  .page-header {
+    display: none;
   }
-  
-.checkbox-label .fa-sun {
-    /* CSS cho hình ảnh mặt trời */
-    width: 18px;
-    height: 18px;
-    fill:#f39c12;
-    margin-left: 1px;
-    
+  .main-content {
+    max-width: auto;
+    margin: 1em;
+  }
 }
 
-.checkbox:checked + .checkbox-label .ball {
-    transform: translateX(22px);
-}
-
-.checkbox-label img {
-    position: relative;
-    z-index: 0; /* Đặt sự sắp xếp để nằm dưới span ball */
-}
-/*  Support me if you like it */
-.support {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-.support a {
-    color: #292c35;
-    font-size: 32px;
-    backface-visibility: hidden;
-    display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.support a:hover{
-    transform: scale(1.1);
+// Code block style.
+.highlight {
+  .n {
+    color: #525151;
+  }
+  .o {
+    color: #660707;
+  }
+  .nl {
+    color: darkgreen;
+  }
+  .kt {
+    color: darkblue;
+  }
+  .fm {
+    color: blue;
+  }
+  .sb {
+    color: darkcyan;
+  }
 }
