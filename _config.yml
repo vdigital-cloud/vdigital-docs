@@ -34,7 +34,7 @@ search:
   # Supports true or false (default)
   button: false
 
-
+switch_theme_available_timeout_fart: 1000
 # For copy button on code
 enable_copy_code_button: true
 
