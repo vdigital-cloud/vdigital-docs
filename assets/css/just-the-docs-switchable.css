@@ -1949,6 +1949,17 @@ h6,
     justify-content: center;
 }
 
+.search-button:hover {
+    cursor: pointer;
+    transition: 0.9s;
+    width: 3.6rem;
+    height: 3.6rem;
+    box-shadow: none;
+    transform: rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
 
 .btn-top {
     display: none;
@@ -1968,9 +1979,16 @@ h6,
     justify-content: center;
   }
   
-  /* .btn-top:hover {
-    background-color: #555;
-  } */
+  .btn-top:hover {
+    cursor: pointer;
+    transition: 0.9s;
+    width: 3.6rem;
+    height: 3.6rem;
+    box-shadow: none;
+    transform: rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
 
 .search-overlay {
     position: fixed;
@@ -11370,10 +11388,21 @@ html.dark-mode .search-button {
     background-color: #302d36;
     border: 1px solid rgba(44, 132, 250, 0.3);
     border-radius: 1.75rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
     align-items: center;
     justify-content: center;
 }
+
+html.dark-mode .search-button:hover {
+    cursor: pointer;
+    transition: 0.9s;
+    width: 3.6rem;
+    height: 3.6rem;
+    box-shadow: none;
+    transform: rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
 
 html.dark-mode .btn-top {
     display: none;
@@ -11384,14 +11413,27 @@ html.dark-mode .btn-top {
     width: 3.5rem;
     height: 3.5rem;
     background-color: #302d36;
-    border: 1px solid rgba(114, 83, 237, 0.3);
+    border: 1px solid rgba(44, 132, 250, 0.3);
     border-radius: 1.75rem;
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.12),
-      0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
     align-items: center;
     justify-content: center;
+}
+
+html.dark-mode .btn-top:hover {
+    cursor: pointer;
+    transition: 0.9s;
+    width: 3.6rem;
+    height: 3.6rem;
+    box-shadow: none;
+    transform: rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -ms-transform: rotate(360deg);
   }
+
+html.dark-mode .btn-top svg {
+    stroke: #2C83F7;
+}
 
 html.dark-mode .search-overlay {
     position: fixed;
