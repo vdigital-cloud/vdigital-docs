@@ -31,3 +31,8 @@ window.addEventListener("DOMContentLoaded", function() {
     }
   }
 });
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
