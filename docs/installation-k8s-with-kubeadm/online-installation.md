@@ -4,7 +4,7 @@ title: Install K8S with Kubeadm (Online)
 parent: Installation K8S with Kubeadm
 nav_order: 5
 ---
-# Code
+# Install K8S with Kubeadm (Online)
 {: .no_toc }
 
 ## Table of contents
