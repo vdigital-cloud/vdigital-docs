@@ -43,7 +43,7 @@ bundle install
 
 After running the above command, the result will be as shown in the image below.
 
-![](../assets/image/bundle-install.png)
+![](../../assets/image/bundle-install.png)
 
 ## Running website in local
 
@@ -55,4 +55,4 @@ bundle exec jekyll serve
 
 After running the above command, the result will be as shown in the image below.
 
-![](../assets/image/web-running-local.png)
+![](../../assets/image/web-running-local.png)
