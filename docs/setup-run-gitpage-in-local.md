@@ -19,7 +19,7 @@ In these page, we have setup running this page in local.
 
 ## Install ruby
 
-In the page, we have downloaded Ruby from the in the [website](https://rubyinstaller.org/downloads/).
+In the page, we have downloaded Ruby from the in the [website](https://rubyinstaller.org/downloads/). And install in the [link](https://www.geekbits.io/how-to-install-ruby-on-windows-11/)
 
 You should download Ruby with Devkit, because if you download Ruby without Devkit it will have issue use command `bundler install.
 {: .note }
@@ -29,7 +29,7 @@ You should download Ruby with Devkit, because if you download Ruby without Devki
 You should use powershell run as administrator. And run command in folder source after pull to git.
 {: .warning }
 
-After downloading Ruby, we have used gem install bundler (Bundler is a gem that manages gem dependencies).
+After downloading and install Ruby, we have used gem install bundler (Bundler is a gem that manages gem dependencies).
 
 ```bash
 gem install bundler
