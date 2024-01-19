@@ -14,6 +14,8 @@ nav_order: 5
 1. TOC
 {:toc}
 
+If you don't have the Terraform source, please go to this [GitHub link](https://github.com/aquynh1682/terraform-create-vmware).
+
 ## Declare the virtual machine configuration in the JSON file
 
 In JSON file configuration for linux. It is has nine key and value pairs for virtual machine. It there include key and value below.
@@ -39,7 +41,7 @@ In JSON file configuration for linux. It is has nine key and value pairs for vir
 
 After understanding more about the JSON file configuration, you can view image below.
 
-![](../../assets/image/config-json-linux.png)
+![](https://vdigital-cloud.github.io/vdigital-docs/assets/image/config-json-linux.png)
 
 ## Configuration variable in the variables.tf
 
