@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Install K8S with Kubeadm (Online)
-parent: Installation K8S with Kubeadm
+title: Cài đặt K8s bằng Kubeadm (Online)
+parent: Cài đặt K8s bằng Kubeadm
 nav_order: 5
 ---
-# Install K8S with Kubeadm (Online)
+# Cài đặt K8s bằng Kubeadm (Online)
 {: .no_toc }
 
-## Table of contents
+## Mục Lục
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
 ---
-## Pre-installation
+## Chuẩn bị trước khi cài đặt
 <div class="code-example" markdown="1">
 ```
 sudo swapoff -a 
@@ -27,7 +27,7 @@ systemctl disable firewalld
 </div>
 ---
 
-## Install Docker
+## Cài đặt Docker
 <div class="code-example" markdown="1">
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -38,7 +38,7 @@ systemctl enable docker
 </div>
 ---
 
-## Install Kubelet, Kubeadm, Kubectl
+## Cài đặt Kubelet, Kubeadm, Kubectl
 <div class="code-example" markdown="1">
 ```
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
@@ -76,7 +76,9 @@ echo "1" > /proc/sys/net/bridge/bridge-nf-call-iptables
 sudo kubeadm init --control-plane-endpoint "<mgmt-ip>:6443" --upload-certs --kubernetes-version 1.24.6
 ```
 </div>
-This action with generates join token for both master and worker node; copy tokens to each nodes due to requirements
+
+Câu lệnh trên sẽ tự động tạo ra đoạn mã cho cả master và worker node có thể kết nối vào cụm k8s. Copy tokens vào các node có trong mạng.z 
+
 ---
 
 ## Applying Network (Calico)

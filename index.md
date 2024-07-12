@@ -5,11 +5,11 @@ nav_order: 1
 permalink: /
 ---
 
-# Overview
+# Tổng Quan
 
-This is the documentation for the VDI Cloud Team.
+Đây là  tài liệu của VDI CLOUD TEAM.
 
-This documentation includes sections for editing Kubernetes, Terraform, AWS Cloud, GCP Cloud, and more to tailor them to our needs.
+Trong tài liệu này sẽ bao gồm cách triển khai, vận hành và xử lý sự cố các phần mềm như là Kubernetes, Terraform, AWS, GCP, VMware, ... 
 
 
 

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Setup page in local
+title: Chạy trang này dưới local
 nav_order: 2
 ---
 
-# Setup page in local
+# Chạy trang này dưới local
 {: .no_toc}
 
-## table of content
+## Mục Lục
 {: .no_toc .text-delta}
 
 1. TOC
@@ -15,44 +15,44 @@ nav_order: 2
 
 ---
 
-In these page, we have setup running this page in local.
+Trong trang này, chúng tôi sẽ hướng dẫn chạy website này dưới local. Mục đích của việc này là giúp bạn có thể xem nhanh các nội dung bạn đã thêm hoặc sửa trước khi đẩy lên git.
 
-## Install ruby
+## Cài Đặt ruby
 
-In the page, we have downloaded Ruby from the in the [website](https://rubyinstaller.org/downloads/). And install in the [link](https://www.geekbits.io/how-to-install-ruby-on-windows-11/)
+Đầu tiên chúng ta sẽ tải bộ cài Ruby trong đường dẫn này [website](https://rubyinstaller.org/downloads/). và cách cài đặt tại link này [link](https://www.geekbits.io/how-to-install-ruby-on-windows-11/)
 
-You should download Ruby with Devkit, because if you download Ruby without Devkit it will have issue use command `bundler install.
+Bạn nên tải Ruby với Devkit, tại vì nếu bạn tải Ruby mà không kèm với Devkit nó sẽ bị lỗi khi sử dụng lệnh `bundler install`.
 {: .note }
 
-## Using gem install library
+## Sử dụng Gem để cài đặt thư viện 
 
-You should use powershell run as administrator. And run command in folder source after pull to git.
+Bạn cần mở powershell với quyền Administrator. Và chạy lệnh trong thư mục vừa pull từ git về.
 {: .warning }
 
-After downloading and install Ruby, we have used gem install bundler (Bundler is a gem that manages gem dependencies).
+Sau khi tải và cài đặt Ruby, sử dụng gem để install Bundler (Bundler là một công cụ quản lý các dependencies của dự án Ruby).
 
 ```bash
 gem install bundler
 ```
 
-And using bundle install library or dependency in the gem file.
+Và sử dụng bundle để cài đặt thư viện và dependency trong file gem.
 
 ```bash
 bundle install
 ```
 
-After running the above command, the result will be as shown in the image below.
+Sau khi chạy lệnh ở trên, kết quả sẽ như ảnh bên dưới.
 
 ![](../../assets/image/bundle-install.png)
 
-## Running website in local
+## Khởi chạy website ở dưới local
 
-In this module, we using command:
+Trong phần này sẽ chạy câu lệnh như bên dưới để phát web ở dưới local bằng port 4000
 
 ```bash
 bundle exec jekyll serve
 ```
 
-After running the above command, the result will be as shown in the image below.
+Sau khi chạy câu lệnh ở trên, kết quả sẽ được như hình bên dưới.
 
 ![](../../assets/image/web-running-local.png)
