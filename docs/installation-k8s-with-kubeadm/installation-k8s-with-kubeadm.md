@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Installation K8S with Kubeadm
+title: Cài đặt K8s bằng Kubeadm
 nav_order: 3
 has_children: true
 permalink: /docs/k8s-installation
 ---
 
-# Installation K8S with Kubeadm
+# Cài đặt K8s bằng Kubeadm
