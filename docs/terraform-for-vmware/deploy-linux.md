@@ -1,51 +1,51 @@
 ---
 layout: default
-title: Create vmware OS Linux in vCenter
-parent: Terraform for VMware
+title: Tạo máy ảo Linux trên vCenter
+parent: Terraform và vmware
 nav_order: 5
 ---
 
-# Create template
+# Tạo template
 {: .no_toc }
 
-## Table of contents
+## Mục Lục
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-If you don't have the Terraform source, please go to this [GitHub link](https://github.com/aquynh1682/terraform-create-vmware).
+Nếu bạn không có source của bộ Terraform dưới, nhấn vào link này và pull về máy [GitHub link](https://github.com/aquynh1682/terraform-create-vmware).
 
-## Declare the virtual machine configuration in the JSON file
+## Khai báo cấu hình cho terraform bằng cách khai biến trong file json
 
-In JSON file configuration for linux. It is has nine key and value pairs for virtual machine. It there include key and value below.
+Trong file Json cấu hình cho Linuxs. Nó có 9 cặp khoá key và values cho máy ảo Linux. Nó bao gồm key và values như ở dưới đây.
 
 {: .note}
-> You can create multiple virtual machine in vCenter by add other object in JSON file configuration for linux.
+> Bạn có thể tạo nhiều máy ảo một lúc trong vCenter hãy thêm các object trong JSON File cấu hình.
 > <div markdown="block">
 > {: .warning }
->> If you add other object in JSON file, you should add a `,` after the old object and at the beginning of the new object
+>> Nếu thêm các máy ảo khác trong JSON File, bạn phải thêm dấu `,` sau một object cũ và trước một object mới.
 > </div>
 
 |        Key    |    Value        |
 |:--------------|:----------------|
-|`name_vm`      |Name of virtual machine in vCenter |
-|`cpu`          |The number of CPUs allocated to the virtual machine |
-|`memory`       |The number of Memory allocated to the virtual machine Ex: 4Gb -> 4096 |
-|`ip_address`   |IP address allocated to the virtual machine |
-|`subnet`       |Subnet mark allocated to the virtual machine Ex: 255.255.255.0 -> 24|
-|`gateway`      |Gateway allocated to the virtual machine|
-|`host_name`    |HostName in the OS|
-|`domain`       |Domain name of OS, should set default the `default`|
-|`dns`          |Domain Name System in the virtual machine|
+|`name_vm`      |Tên của máy ảo ở trong vcenter |
+|`cpu`          |Số lượng CPU được cấp cho VM |
+|`memory`       |Số lượng memory được cấp cho VM ví dụ: 4Gb -> 4096 |
+|`ip_address`   |Địa chỉ IP được gắn cho VM |
+|`subnet`       |Subnet mark gắn cho VM ví dụ: 255.255.255.0 -> 24|
+|`gateway`      |Gateway gắn cho VM|
+|`host_name`    |Hostname cho OS|
+|`domain`       |Domain của OS, nó có giá trị mặc định là `default`|
+|`dns`          |DNS của VM ví dụ: 8.8.8.8|
 
-After understanding more about the JSON file configuration, you can view image below.
+Sau khi điền các thông tin cấu hình vào file Json, và ảnh sẽ như bên dưới.
 
 ![](https://vdigital-cloud.github.io/vdigital-docs/assets/image/config-json-linux.png)
 
-## Configuration variable in the variables.tf
+## Cấu hình biến trong file variables.tf
 
-In this Terraform variable configuration section, you can see its content as below.
+Tại phần này sẽ cấu hình biến Terrafrom, bạn có thể xem nội dung của file cấu hình đó như dưới này.
 
 ```tf
 locals {
@@ -94,28 +94,28 @@ variable "vsphere_password" { # password login vmware vsphere client
 }
 ```
 
-In the local values section as above, we will read the content of the JSON file that we previously configured above. And variables will list table below.
+Trong cấu hình các biến ở trên, chúng ta đã xem nội dung của nó rồi. Tiếp đến là phần giải thích từng biến của file bên trên.
 
-|        Variables    |    explain        |
+|        Biến    |    Giải thích        |
 |:--------------|:----------------|
-|`vsphere_server`      |Host or domain access to vSphere Client|
-|`esxi_host`          |IP address of esxi server|
-|`vsphere_dataCenter`       |Name of Datacenter in the vSphere Client|
-|`vsphere_dataStore`   |Name of storage of esxi|
-|`vsphere_network`       |Config network for virtual machine|
-|`vsphere_template`      |Template OS linux will create|
-|`vsphere_user`         |User login vSphere Client|
-|`vsphere_password`       |Password login vSphere Client|
+|`vsphere_server`      |Domain hoặc ip để truy cập vào vsphere|
+|`esxi_host`          |Domain hoặc ip để truy cập vào esxi|
+|`vsphere_dataCenter`       |Tên của Datacenter trong vsphere|
+|`vsphere_dataStore`   |Tên của ổ cứng trong esxi|
+|`vsphere_network`       |Chọn card mạng cho VM|
+|`vsphere_template`      |Sẽ tạo VM theo mẫu của template OS Linux|
+|`vsphere_user`         |User đăng nhập vsphere|
+|`vsphere_password`       |Password đăng nhập vsphere|
 
 {: .note }
-You have enter info into the default of variable.
+Bạn có thể điền các giá trị vào trong mục default.
 
-## Deploy vmware in vCenter with terraform
+## Triển khai máy ảo trên vCenter bằng terraform
 
 {: .note }
-Before run terraform, you should access file main.tf to verify resource of linux hasn't comment and resource of windows has comment.
+trước khi chạy terraform, bạn trên truy cập vào file main.tf kiểm tra lại lần nữa xem là cấu hình chạy cho Linux có được gỡ comment chưa và đã comment cấu hình chạy cho windows chưa. Nếu đã xác nhận xong thì sang bước tiếp theo.
 
-After configuration variable, you can run command `terraform plane` to verify configuration. After verify done, you have run command `terraform apply` and enter `yes`. After you wait to minutes for the terraform deploy virtual machine in the vSphere.
+Sau khi cấu hình biến, bạn có thể chạy lệnh `terraform plan` để xác nhận cấu hình có đúng không. Sau khi kiểm tra xong, bạn có thể chạy lệnh `terraform apply` và nhập `yes`. Sau khi đợi vài phút máy ảo sẽ được triển khai.
 
 {: .warning}
-After running command `terraform apply`, terraform has create two file is a terraform.tfstate and terraform.tfstate.backup. Both file has save configuration you just run. If you doesn't delete two file, terraform will delete all previously created resources and this has create new resource.
+Sau khi chạy lệnh `terraform apply`, terraform sẽ tạo ra hai file là terraform.tfstate và terraform.tfstate.backup. Cả 2 file này có lưu lại cấu hình chạy trước đó. Nếu bạn không xoá hai file này, khi chạy lại `terraform apply` nó sẽ xoá hết cấu hình tài nguyên cũ đã tạo, và tạo lại tài nguyên cũ.

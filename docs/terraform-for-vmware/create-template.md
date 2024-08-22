@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Create template
-parent: Terraform for VMware
+title: Tạo template
+parent: Terraform và vmware
 nav_order: 4
 ---
 
-# Create template
+# Tạo template
 {: .no_toc }
 
-## Table of contents
+## Mục lục
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-## Create template for linux OS in vsphere
+## Tạo template cho OS linux trong vsphere
 
-## Create template for Windows OS in vsphere
+## Tạo template cho OS windows trong vsphere
