@@ -77,7 +77,7 @@ sudo kubeadm init --control-plane-endpoint "<mgmt-ip>:6443" --upload-certs --kub
 ```
 </div>
 
-Câu lệnh trên sẽ tự động tạo ra đoạn mã cho cả master và worker node có thể kết nối vào cụm k8s. Copy tokens vào các node có trong mạng.z 
+Câu lệnh trên sẽ tự động tạo ra đoạn mã cho cả master và worker node có thể kết nối vào cụm k8s. Copy tokens vào các node có trong mạng.
 
 ---
 

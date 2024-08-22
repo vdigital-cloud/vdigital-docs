@@ -3,7 +3,7 @@ layout: default
 title: Terraform và vmware
 nav_order: 3
 has_children: true
-permalink: /docs/terraform-for-vmware
+permalink: /docs/terraform-và-vmware
 ---
 
 # Terraform và vmware
